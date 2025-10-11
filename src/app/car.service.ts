@@ -2,6 +2,7 @@
 //service is nothting but simple class
 
 import { Injectable , EventEmitter } from "@angular/core";
+import { EngineService } from "./engine.service";
 
 
 //angular identify that treat carserice as service in theapp 
@@ -23,6 +24,10 @@ import { Injectable , EventEmitter } from "@angular/core";
 
 @Injectable()
 export class CarService{
+
+    constructor(public engineservice : EngineService){
+
+    }
     getMecsList(){
         return ["John" , "Peter"];
     }
@@ -44,7 +49,9 @@ export class CarService{
          this.paymentMessenger.emit(amount);
     }
 
-
+   getCarEnginesList(){
+         return this.engineservice.getEnginesList();
+   }
     
 
 

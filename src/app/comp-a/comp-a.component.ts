@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CarService } from '../car.service';
 
+
 // we have created the service
 // we have register the service
 
@@ -38,4 +39,6 @@ export class CompAComponent {
   }
 
 
-}
+  }
+
+

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarService } from '../car.service';
+import { logsService } from '../logs.service';
 
 @Component({
   selector: 'app-comp-b',
@@ -7,11 +8,12 @@ import { CarService } from '../car.service';
   styleUrls: ['./comp-b.component.css'],
 })
 export class CompBComponent {
-  constructor(public carSERvice: CarService) {
+  constructor(public carSERvice: CarService,public logService:logsService) {
 
       // i need to take the money
       this.carSERvice.paymentMessenger.subscribe((result)=>{
-           console.log(result); //not srue
+           //console.log(result); //not srue
+           this.logService.getLogs(result,"❤️❤️❤️");
       })
 
 
@@ -20,9 +22,12 @@ export class CompBComponent {
   availbleSlots: string[] = [];
   GetAvailbleSlots() {
     this.availbleSlots = this.carSERvice.getAvailbleSlots();
-    console.log(this.availbleSlots);
+    //console.log(this.availbleSlots);
+    this.logService.getLogs(this.availbleSlots,"😍😍😍");
   }
 
-
-
+    enginesList:string[]=[];
+    GetEnginesList(){
+    this.enginesList=this.carSERvice.getCarEnginesList();
+}
 }
