@@ -4,7 +4,7 @@
 import { Injectable , EventEmitter } from "@angular/core";
 
 
-//angular identify that treat carserice as service in theapp 
+//angular identify that treat carserice as service in theapp
 //More over you can use other paymentservice into the carservice
 
 
@@ -19,7 +19,7 @@ import { Injectable , EventEmitter } from "@angular/core";
 //   local mobile service shop  ---> samsung mobile service
 
 // Gold shop serivce ---> chain design (book let ) 1 or 2 members   ---> shop
-// 
+//
 
 @Injectable()
 export class CarService{
@@ -45,7 +45,7 @@ export class CarService{
     }
 
 
-    
+
 
 
 
